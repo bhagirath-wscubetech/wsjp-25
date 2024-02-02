@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        *{
+            cursor: none;
+        }
+        #btn {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            filter: blur(10px);
+            background-color: lightcoral;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="btn"></div>
+    <!-- <button id="btn">
+        Click kardo
+    </button> -->
+    <script>
+        var btn = document.querySelector("#btn");
+        document.addEventListener(
+            "mousemove",
+            function (e) {
+                // console.log(e.clientX, e.clientY);
+                btn.style.top = (e.clientY-10) + "px";
+                btn.style.left = (e.clientX-50) + "px";
+            }
+        )
+        btn.addEventListener(
+            "click",
+            function (event) {
+                console.log(event);
+            }
+        )
+    </script>
+</body>
+
+</html>

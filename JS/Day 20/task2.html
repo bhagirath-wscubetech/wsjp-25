@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .parent {
+            width: 1000px;
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 30%;
+            height: 300px;
+            box-shadow: 0px 0px 2px grey;
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <select id="selBox" onchange="sel(this.value)">
+        <option value="0">-----Select----</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+    <div class="parent">
+        <!-- <div class="box">
+            <img src="https://picsum.photos/200/300?random=1" alt="">
+        </div> -->
+    </div>
+    <script>
+        var parent = document.querySelector(".parent");
+        function sel(num) {
+            console.log(num);
+            parent.innerHTML = "";
+            for (var i = 1; i <= num; i++) {
+                var box = document.createElement("div");
+                box.classList.add("box");
+                box.innerHTML = `<img src="https://picsum.photos/200/300?random=${i}" alt="">`;
+                parent.appendChild(box);
+            }
+        }
+    </script>
+</body>
+
+</html>

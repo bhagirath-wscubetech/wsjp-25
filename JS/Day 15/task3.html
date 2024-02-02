@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+    </style>
+</head>
+
+<body>
+    <input type="text">
+    <ul id="itemBox">
+
+    </ul>
+    <script>
+        var input = document.querySelector("input");
+        var itemBox = document.querySelector("#itemBox");
+        input.addEventListener(
+            "keyup",
+            function (e) {
+                if (e.key == "Enter") {
+                    // console.log(e.target.value);
+                    itemBox.innerHTML = itemBox.innerHTML + `<li> ${e.target.value} </li>`;
+                    e.target.value = "";
+                }
+            }
+        )
+    </script>
+</body>
+
+</html>

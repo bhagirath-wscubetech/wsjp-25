@@ -1,0 +1,75 @@
+<script>
+    function calc(a, b, opr) {
+        var c = "Invalid operator";
+        if (opr == "+") {
+            c = a + b;
+        } else if (opr == "-") {
+            c = a - b;
+        } else if (opr == "x") {
+            c = a * b;
+        } else if (opr == "/") {
+            c = a / b;
+        } else if (opr == "%") {
+            c = a % b;
+        }
+        return c;
+    }
+
+    var res1 = calc(4, 3, "+");
+    console.log(res1);
+
+    // calc(7,4,'-')
+    var res2 = calc(res1, 4, "-");
+    console.log(res2);
+
+    var res3 = calc(res1, res2, "x");
+    console.log(res3);
+
+
+
+
+
+
+    // function demo() {
+    //     console.log('Hiii');
+    //     console.log('Hello');
+    //     return 'Kese hai aap log';
+    // }
+    // var f = demo();
+    // console.log(f);
+
+
+
+    // function calc(a, b, opr) {
+    //     var c = "Invalid operator";
+    //     if (opr == "+") {
+    //         c = a + b;
+    //     } else if (opr == "-") {
+    //         c = a - b;
+    //     } else if (opr == "x") {
+    //         c = a * b;
+    //     } else if (opr == "/") {
+    //         c = a / b;
+    //     } else if (opr == "%") {
+    //         c = a % b;
+    //     }
+    //     console.log(c);
+    // }
+
+    // calc(1, 3, "+");
+    // calc(2, 3, "-");
+    // calc(12, 3, "x");
+    // calc(5, 3, "bhagirath");
+
+    // function add(a, b) {
+    //     console.log(a + b);
+    // }
+    // add(3, 4);
+    // add(2, 1);
+    // add(1, 5);
+
+    // function demo() {
+    //     console.log('Hello user');
+    // }
+    // demo();
+</script>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .parent {
+            width: 500px;
+            padding: 10px;
+            background-color: black;
+            color: chartreuse;
+            margin: auto;
+            font-family: 'Courier New', Courier, monospace;
+            border-radius: 5px;
+        }
+
+        #toggler {
+            padding: 10px;
+            cursor: pointer;
+            display: inline-block;
+            color: grey;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .highlight {
+            color: chartreuse !important;
+        }
+
+        #clock {
+            font-size: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .date {
+            width: 100%;
+            font-size: 20px;
+            text-align: center;
+            display: inline-block;
+            margin: 10px 0;
+        }
+
+        #week {
+            justify-content: center;
+            gap: 20px;
+            color: grey;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body onload="clock()">
+    <select name="" id="">
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+        <option value="">4</option>
+        <option value="">5</option>
+    </select>
+    <div class="parent">
+        <div id="toggler">24 hrs</div>
+        <div id="clock">00:00:00</div>
+        <div id="week">
+        </div>
+    </div>
+    <script>
+        var clockBox = document.querySelector("#clock");
+        var toggler = document.querySelector("#toggler");
+        var flag = false; // false: 12 hrs clock and true: 24 hrs clock
+        var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Frid', 'Sat'];
+
+        var images = [
+            'https://picsum.photos/200/300?random=1',
+            'https://picsum.photos/200/300?random=2',
+            'https://picsum.photos/200/300?random=3',
+            'https://picsum.photos/200/300?random=4'
+        ]
+        var week = document.querySelector("#week");
+        console.log(days);
+
+        toggler.addEventListener(
+            "click",
+            function () {
+                toggler.classList.toggle("highlight");
+                flag = !flag;
+                // flag = !true // flag = false
+                // flag = !false // flag = true
+            }
+        )
+
+        function clock() {
+            var d = new Date();
+            var h = d.getHours();
+            var m = d.getMinutes();
+            var s = d.getSeconds();
+            var wd = d.getDay();
+            week.innerText = "";
+            for (var i = 0; i < days.length; i++) {
+                var span = document.createElement("span");
+                span.innerText = days[i];
+                if (i == wd) {
+                    span.classList.add("highlight");
+                }
+                week.appendChild(span);
+            }
+
+            if (flag == false) {
+                if (h > 12) {
+                    h = h - 12;
+                }
+            }
+            if (h < 10) h = "0" + h;
+            if (m < 10) m = "0" + m;
+            if (s < 10) s = "0" + s;
+
+            clockBox.innerHTML = `${h}:${m}:${s} <br> <span class="date"> ${d.toDateString()} <span>`;
+        }
+
+        setInterval(
+            clock,
+            1000
+        )
+
+
+    </script>
+</body>
+
+</html>

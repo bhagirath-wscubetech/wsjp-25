@@ -1,0 +1,98 @@
+<script>
+    // 1) write a function which takes an array and returns the reverse of that.
+    // 2) write a function which takes up an array of random numbers and returns the sum of that.
+    // 3) write a function to return the factorial of a given number.
+    // 4) write a function to print the series of numbers in between the given values from user.
+    // 5) write a function which returns true if the number is prime and false if it is not
+    // 6) write a function, which return the largest among three numbers.
+    // 7) write a function to calculate the total number of two digit numbers present in an random array
+    // एक यादृच्छिक सरणी में मौजूद दो अंकों की संख्याओं की कुल संख्या की गणना करने के लिए एक फ़ंक्शन लिखें
+
+
+    function count(numbers) {
+        var total = 0;
+        for (n of numbers) {
+            if (n >= 10 && n <= 99) {
+                total++;
+            }
+        }
+        return total;
+    }
+
+    var a = [10, 5, 603, 0, 22, 40, 332, 53, 56, 2, 4, 664, 22, 100, 44, 66, 21];
+    var res1 = count(a);
+    console.log(res1);
+
+    // function isPrime(n) {
+    //     var flag = true;
+    //     for (var i = 2; i < n; i++) {
+    //         if (n % i == 0) {
+    //             flag = false;
+    //             break;
+    //         }
+    //     }
+    //     return flag;
+    // }
+
+    // var r1 = isPrime(5);
+    // console.log(r1);
+
+    // var r2 = isPrime(15);
+    // console.log(r2);
+
+    // function series(start, end) {
+    //     for (var i = start; i <= end; i++) {
+    //         console.log(i);
+    //     }
+    // }
+
+    // series(1, 10)
+
+    // function fact(n) {
+    //     var f = 1;
+    //     for (var i = 1; i <= n; i++) {
+    //         f *= i;
+    //     }
+    //     return f;
+    // }
+    // var res = fact(5);
+    // console.log(res);
+
+    // var res1 = fact(10);
+    // console.log(res1);
+
+
+
+    // function sum(numbers) {
+    //     var total = 0;
+    //     for (n of numbers) {
+    //         total += n;
+    //     }
+    //     return total;
+    // }
+
+    // var a = [1, 4, 3, 7, 1, 33, 54, 122, 43, 764, 221, 433, 111];
+    // var res = sum(a);
+    // console.log(res);
+
+    // var b = [100, 300, 500, 300, 600];
+    // var res1 = sum(b);
+    // console.log(res1);
+
+
+    // function revArr(arr) {
+    //     var rev = [];
+    //     for (var i = arr.length - 1; i >= 0; i--) {
+    //         rev.push(arr[i]);
+    //     }
+    //     return rev;
+    // }
+
+    // var a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    // var revA = revArr(a);
+    // console.log(revA);
+
+    // var names = ['Bhagirath', 'Anjali', 'Nikita', 'Anil', 'Sanjay'];
+    // var revNames = revArr(names);
+    // console.log(revNames);
+</script>

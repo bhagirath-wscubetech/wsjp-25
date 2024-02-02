@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+p{
+    margin: 10px 0;
+}
+.middle{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    border:1px red solid;
+}
+
+.left{
+    width: 250px;
+    height: auto;
+    border:1px black solid;
+    float: left;
+}
+.right{
+    width: 800px;
+    float: right;
+    height: auto;
+    border:1px blue solid;
+}

@@ -1,0 +1,23 @@
+<button onclick="demo()">Click Me</button>
+<script>
+    function demo() {
+        console.log('Hii');
+        setTimeout(
+            function () {
+                // callback
+                console.log('hello');
+            },
+            5000
+        )
+        //-------------
+        setInterval(
+            function () {
+                // callback
+                console.log('testing');
+            },
+            2000
+        )
+    }
+    // 1000ms -> 1 sec 
+    // 5000ms -> 5 secs
+</script>

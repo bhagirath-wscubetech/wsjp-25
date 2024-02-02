@@ -1,0 +1,160 @@
+* {
+    /* universal selector */
+    /* select all elements */
+    padding: 0;
+    margin: 0;
+    font-family: verdana;
+}
+
+a {
+    text-decoration: none;
+    font-family: inherit;
+    color: inherit;
+}
+
+body {
+    background-color: black;
+}
+
+.main {
+    width: 1170px;
+    height: 1600px;
+    background-color: white;
+    margin: auto;
+}
+
+.top-container {
+    width: 1170px;
+    height: 40px;
+    background-color: #343130;
+    color: white;
+    font-size: 20px;
+}
+
+.top-left {
+    width: 400px;
+    height: 40px;
+    float: left;
+}
+
+.top-right {
+    width: 285px;
+    height: 40px;
+    float: right;
+}
+
+.top-icon {
+    float: left;
+    margin: 10px 13px 0 23px;
+}
+
+.top-text {
+    float: left;
+    margin-top: 7px;
+}
+
+.menu-container {
+    width: 1170px;
+    height: 140px;
+}
+
+.logo {
+    width: 165px;
+    margin-top: 10px;
+    margin-left: 50px;
+    float: left;
+}
+
+.menu-box {
+    width: 900px;
+    height: 140px;
+    float: right;
+}
+
+.menu-item {
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: arial;
+    color: #343130;
+    margin-top: 110px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.menu-item:hover {
+    color: #00a8ec;
+    border-bottom: 2px #00a8ec solid;
+    /* text-decoration: underline 2px #00a8ec; */
+}
+
+.middle-container {
+    width: 1170px;
+    height: 750px;
+}
+
+.middle-left {
+    width: 260px;
+    height: 750px;
+    float: left;
+}
+
+.middle-right {
+    width: 850px;
+    height: 750px;
+    float: right;
+}
+
+.news-box {
+    width: 250px;
+    height: 360px;
+}
+
+.news-heading {
+    width: 250px;
+    height: 45px;
+    padding-top: 15px;
+    text-align: center;
+    background-color: rgb(239, 165, 0);
+    color: white;
+    /* font-family: Arial;
+    font-weight: bold;
+    font-size: 20px; */
+    font: bold 20px Arial;
+    border-radius: 15px 15px 0 0;
+    /* clockwise */
+}
+
+.news-body {
+    width: auto;
+    height: 250px;
+    border: 1px #908c89 solid;
+    border-top: 0;
+}
+
+.course-box {
+    width: 850px;
+    height: 230px;
+}
+.course-item{
+    height: 40px;
+    width: 380px;
+    float: left;
+    margin-right: 40px;
+    margin-top: 10px;
+}
+.course-icon{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #e6611c;
+    float: left;
+}
+.course-text{
+    font-weight: normal;
+    font-family: Arial;
+    color: #e6611c;
+    float: left;
+    margin-top: 8px;
+    margin-left: 10px;
+}

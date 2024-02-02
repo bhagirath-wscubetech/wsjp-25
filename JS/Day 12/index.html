@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .test {
+            width: 100px;
+            height: 100px;
+            float: left;
+            border: 1px grey solid;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Keypress
+        <input type="text" class="demo" onkeypress="getData(0)">
+    </div>
+    <div>
+        Keyup
+        <input type="text" class="demo" onkeyup="getData(1)">
+    </div>
+    <div>
+        Keydown
+        <input type="text" class="demo" onkeydown="getData(2)">
+    </div>
+    <div style="margin: 40px 0;">
+        <div class="test">keypress</div>
+        <div class="test">keypup</div>
+        <div class="test">keydown</div>
+    </div>
+    <script>
+        var demo = document.getElementsByClassName("demo");
+        var test = document.getElementsByClassName("test");
+
+        function getData(index) {
+            test[index].style.background = 'red';
+            setTimeout(
+                () => {
+                    test[index].style.background = '';
+                },
+                100
+            )
+        }
+    </script>
+</body>
+
+</html>

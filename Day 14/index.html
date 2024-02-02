@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .parent {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+        }
+
+        .box {
+            width: 400px;
+            height: 400px;
+            font-size: 60px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="box">
+            <img src="https://picsum.photos/id/237/400/400" alt="">
+        </div>
+        <div class="box">
+            <img src="https://picsum.photos/id/238/400/400" alt="">
+        </div>
+        <div class="box">
+            <img src="https://picsum.photos/id/239/400/400" alt="">
+        </div>
+        <div class="box">
+            <img src="https://picsum.photos/id/240/400/400" alt="">
+        </div>
+    </div>
+
+    <script>
+        const boxes = document.querySelectorAll(".box");
+        boxes.forEach(
+            (box) => {
+                const num = Math.floor(Math.random() * 10);
+                box.style.order = num;
+            }
+        )
+    </script>
+</body>
+
+</html>

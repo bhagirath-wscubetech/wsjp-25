@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+
+        .parent {
+            width: 1000px;
+            margin: auto;
+            display: flex;
+            padding: 5px;
+        }
+
+        input,
+        textarea {
+            font-size: 20px;
+            padding: 5px;
+            display: block;
+            margin: 10px;
+        }
+
+        .box {
+            width: 50%;
+            min-height: 500px;
+            border: 1px black solid;
+        }
+
+        .output {
+            margin: 20px;
+        }
+
+        #fontValue {
+            width: 50px;
+            text-align: center;
+        }
+
+        .btn {
+            font-size: 25px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="box">
+            <input type="text" class="input" placeholder="To" onkeyup="getData(0)">
+            <textarea name="" id="" class="input" placeholder="Message" cols="30" rows="10"
+                onkeyup="getData(1)"></textarea>
+            <input type="text" class="input" placeholder="From" onkeyup="getData(2)">
+        </div>
+        <div class="box" id="outputBox">
+            <div class="output">To:</div>
+            <div class="output">Message:</div>
+            <div class="output">From:</div>
+        </div>
+    </div>
+    <div class="parent">
+        <button class="btn" onclick="changeFont(0)" id="descBtn" disabled>-</button>
+        <input type="text" readonly id="fontValue" value="16">
+        <button class="btn" onclick="changeFont(1)" id="incBtn">+</button>
+        BG: <input type="color" onchange="outputBox.style.backgroundColor = this.value">
+        Text: <input type="color" onchange="outputBox.style.color = this.value">
+    </div>
+    <script>
+        var inputs = document.getElementsByClassName("input");
+        var outputs = document.getElementsByClassName("output");
+        var outputBox = document.getElementById("outputBox");
+        var fontValue = document.getElementById("fontValue");
+        var descBtn = document.getElementById("descBtn");
+        var incBtn = document.getElementById("incBtn");
+        var fontS = 16;
+
+        function changeFont(flag) {
+
+            flag == 1 ? fontS++ : fontS--;
+
+            if (fontS > 16) {
+                descBtn.disabled = false;
+            } else {
+                descBtn.disabled = true;
+            }
+
+            if (fontS < 28) {
+                incBtn.disabled = false; // enable
+            } else {
+                incBtn.disabled = true; // disable
+            }
+
+
+            // if (flag == 1) {
+            //     if (fontS == 28) return;
+            //     // font size increase
+            //     fontS++;
+            // } else {
+            //     if (fontS == 16) return;
+            //     // font size descrease
+            //     fontS--;
+            // }
+            fontValue.value = fontS;
+            outputBox.style.fontSize = fontS + "px";
+        }
+
+        function getData(index) {
+            outputs[index].innerText = inputs[index].value
+        }
+    </script>
+</body>
+
+</html>

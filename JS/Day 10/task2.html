@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #first {
+            color: red;
+        }
+
+        #second {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="res">0</h1>
+    <h1 id="first">First</h1>
+    <h1 id="second">Second</h1>
+    <button onclick="swap()">Swap</button>
+
+    <script>
+        var firstElem = document.getElementById("first");
+        var counter = 0;
+        var secondElem = document.getElementById("second");
+        var resElem = document.getElementById("res");
+
+        function swap() {
+            counter++;
+            resElem.innerText = counter;
+
+            var temp = firstElem.innerText;
+            firstElem.innerText = secondElem.innerText;
+            secondElem.innerText = temp;
+        }
+    </script>
+</body>
+
+</html>

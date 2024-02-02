@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    <h1 id="demo"> <i> Hello there!! </i> </h1>
+    <button onclick="test()">Click Me</button>
+    <script>
+        var demoElem = document.getElementById("demo");
+
+        function test() {
+            // console.log(demoElem.innerText); // get
+            // demoElem.innerText = "<u> I am fine </u>"; // set
+
+            console.log(demoElem.innerHTML); // get
+            demoElem.innerHTML = "<u> I am fine </u>"; // set
+        }
+
+    </script>
+</body>
+
+</html>

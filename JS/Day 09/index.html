@@ -1,0 +1,25 @@
+<button onclick="details1.getData()">Click1</button>
+<button onclick="details2.getData()">Click2</button>
+<script>
+    var details1 = {
+        name: "Ram",
+        f_name: "Suresh",
+        l_name: "Kumar",
+        age: 20,
+        getData: function () {
+            console.log("The age of " + this.name + " is " + this.age);
+        }
+    }
+
+    var details2 = {
+        name: "Bunty",
+        f_name: "Rakesh",
+        l_name: "Sharma",
+        age: 24,
+        getData: function () {
+            console.log("The age of " + this.name + " is " + this.age);
+        }
+    }
+
+    console.log(this);
+</script>

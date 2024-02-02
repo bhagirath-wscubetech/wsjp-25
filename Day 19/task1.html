@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+
+        nav {
+            width: 1000px;
+            background-color: #34495e;
+            margin: auto;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 20%;
+            padding: 10px;
+        }
+
+        #menu {
+            display: flex;
+            margin-right: 40px;
+            list-style: none;
+            font-size: 20px;
+            gap: 30px;
+        }
+
+        /* direct child selector */
+        #menu>li:hover {
+            color: gold;
+            cursor: pointer;
+        }
+
+        #menu>li {
+            position: relative;
+            height: 65px;
+            display: flex;
+            align-items: center;
+        }
+
+        #menu>li:hover .child {
+            opacity: 1;
+            visibility: visible;
+            top: 60px;
+        }
+
+        .child {
+            color: white;
+            width: 150px;
+            position: absolute;
+            background-color: #3498db;
+            list-style: none;
+            font-size: 16px;
+            transition: 0.5s;
+            top: 150px;
+            left: 0;
+            opacity: 0;
+            /* hides from the user */
+            visibility: hidden;
+            /* hides from the user and mouse */
+        }
+
+        .child>li {
+            padding: 10px;
+        }
+
+        .child>li:hover {
+            background-color: #e67e22;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="" width="100%">
+        </div>
+        <ul id="menu">
+            <li>
+                Home
+            </li>
+            <li>
+                Services
+                <ul class="child">
+                    <li>Web Design</li>
+                    <li>Web Development</li>
+                    <li>SEO</li>
+                </ul>
+            </li>
+            <li>
+                Product
+                <ul class="child">
+                    <li>Prod1</li>
+                    <li>Prod2</li>
+                    <li>Prod3</li>
+                </ul>
+            </li>
+            <li>
+                About
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>

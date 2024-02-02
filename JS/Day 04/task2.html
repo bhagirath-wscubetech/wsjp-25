@@ -1,0 +1,10 @@
+<script>
+    var comm = [100, 400, 300, 600, 1000, 600, 300, 650, 300, 200];
+
+    var total = 0;
+    for (var i = 0; i < comm.length; i++) {
+        if(comm[i] > 500) continue;
+        total += comm[i];
+    }
+    console.log(total);
+</script>

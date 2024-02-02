@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+.box{
+    margin-top: 10px;
+}
+.parent{
+    padding: 10px;
+    max-width: 1000px;
+    margin: auto;
+}
+.title{
+    position: relative;
+}
+.arrow{
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+    transition: 0.5s;
+}
+.title, .para{
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0px 0px 1px grey;
+    
+}
+.para{
+    display: none;
+}

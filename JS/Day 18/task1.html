@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="demo">0</h1>
+    <button id="start">Start</button>
+    <button id="stop" disabled="true">Stop</button>
+    <button id="reset" disabled="true">Reset</button>
+    <script>
+        var demo = document.querySelector("#demo");
+        var start = document.querySelector("#start");
+        var stopBtn = document.querySelector("#stop");
+        var resetBtn = document.querySelector("#reset");
+        var count = 0;
+        var intervalHolder;
+
+        start.addEventListener(
+            "click",
+            function () {
+                intervalHolder = setInterval(
+                    function () {
+                        count++;
+                        demo.innerText = count;
+                    },
+                    1000
+                )
+                start.disabled = true;
+                stopBtn.disabled = false;
+                resetBtn.disabled = false;
+            }
+        )
+
+        stopBtn.addEventListener(
+            "click",
+            function () {
+                clearInterval(intervalHolder);
+                start.disabled = false;
+                stopBtn.disabled = true;
+            }
+        )
+
+        resetBtn.addEventListener(
+            "click",
+            function () {
+                stopBtn.click();
+                count = 0;
+                demo.innerText = 0;
+            }
+        )
+    </script>
+</body>
+
+</html>

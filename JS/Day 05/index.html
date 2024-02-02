@@ -1,0 +1,51 @@
+<script>
+    var nums = [2, 4, 15, 45, 60, 90, 10, 11, 13, 34, 25, 33, 50, 70, 10, 80, 44];
+
+    for (var k = 0; k < nums.length; k++) {
+        var isPrime = true;
+        for (var i = 2; i < nums[k]; i++) {
+            if (nums[k] % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime == true) {
+            console.log(nums[k]);
+        }
+    }
+
+
+    // var sum = 0;
+    // for (var i = 0; i < nums.length; i++) {
+    //     if (nums[i] % 15 == 0) {
+    //         sum += nums[i];
+    //     }
+    // }
+    // console.log(sum);
+
+
+    // var prod = 1;
+    // for (var i = 0; i < nums.length; i++) {
+    //     // console.log(nums[i]);
+    //     if (nums[i] % 2 == 0) {
+    //         prod = prod * nums[i];
+    //         // prod = prodc * nums[i];
+    //     }
+    // }
+    // console.log(prod);
+
+
+
+    // for (var k = 1; k <= 20; k++) {
+    //     var isPrime = true;
+    //     for (var i = 2; i < k; i++) {
+    //         if (k % i == 0) {
+    //             isPrime = false;
+    //             break;
+    //         }
+    //     }
+    //     if (isPrime == true) {
+    //         console.log(k);
+    //     }
+    // }
+</script>

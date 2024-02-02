@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    <script>
+        var num = 49;
+        var isPrime = true;
+        for (var i = 2; i < num; i++) {
+            if (num % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime == true) {
+            console.log('Num is prime');
+        } else {
+            console.log('Num is not prime');
+        }
+
+
+        // for (var i = 1; i <= 100; i++) {
+        //     if (i >= 51 && i <= 61) continue;
+        //     console.log(i);
+        // }
+        // console.log('Hiii');
+    </script>
+</body>
+
+</html>

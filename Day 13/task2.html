@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .parent{
+            width: 1200px;
+            border:1px black solid;
+            display: flex;
+        }
+        .item { 
+            width: 250px;
+            padding: 5px;
+            box-sizing: border-box;
+            transition: 1s;
+            border:1px red solid;
+        }
+        .item img{
+            width: 100%;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="item">
+            <img src="https://picsum.photos/200/300?random=1" alt="">
+        </div>
+        <div class="item" style="flex-grow: 1;">
+            <img src="https://picsum.photos/200/300?random=2" alt="">
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/200/300?random=3" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

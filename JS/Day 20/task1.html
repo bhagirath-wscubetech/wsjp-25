@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="inp" max="10" min="1">
+    <button onclick="renderList()">Click</button>
+    <ul id="main">
+
+    </ul>
+    <script>
+        var main = document.querySelector("#main");
+        var inp = document.querySelector("#inp");
+        function renderList() {
+            main.innerHTML = "";
+            var start = 0;
+            var items = inp.value;
+            var intHolder = setInterval(
+                function () {
+                    if (start == inp.value) {
+                        clearInterval(intHolder);
+                        return; // end of the function
+                    }
+                    start++;
+                    var li = document.createElement("li");
+                    li.innerText = "Items" + start;
+                    main.appendChild(li);
+                },
+                1000
+            )
+        }
+    </script>
+</body>
+
+</html>

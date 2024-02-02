@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            border: 1px black solid;
+            transition: 1s;
+        }
+
+        .overlay {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            transform: scaleX(0);
+            transform-origin: center;
+            opacity: 0;
+            transition: 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            width: 50%;
+            height: 75%;
+            border-radius: 5px;
+            box-shadow: 0px 0px 2px grey;
+            background-color: white;
+        }
+
+        .close {
+            font-family: arial;
+            padding: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay">
+        <div class="card">
+            <div class="close" onclick="removeOverlay()">X</div>
+        </div>
+    </div>
+    <button onclick="bookFreeDemo()">Book Free Demo</button>
+    <div class="box" id="box1"></div>
+    <button onclick="changeColor('red')">Red</button>
+    <button onclick="changeColor('blue')">Blue</button>
+    <button onclick="changeColor('yellow')">Yellow</button>
+    <button onclick="changeColor('green')">Green</button>
+    <button onclick="changeColor('')">Reset</button>
+    <script>
+        var box1 = document.getElementById("box1");
+
+        var overlay = document.getElementsByClassName("overlay");
+        console.log(overlay);
+
+        function bookFreeDemo() {
+            overlay[0].style.opacity = 1;
+            overlay[0].style.transform = "scaleX(1)";
+        }
+        function removeOverlay() {
+            overlay[0].style.opacity = "";
+            overlay[0].style.transform = "";
+        }
+
+
+        function changeColor(d) {
+            box1.style.backgroundColor = d;
+            // box1.style.backgroundColor  = ""
+        }
+    </script>
+</body>
+
+</html>
