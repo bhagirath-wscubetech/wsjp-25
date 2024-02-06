@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+        type="text/css" media="screen" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="counter" data-count="150">0</div>
+    </div>
+    <div class="container">
+        <div class="gallery">
+            <div class="gallery-item">
+                <a href="img/1.jpg">
+                    <img src="img/1.jpg">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="img/2.jpg">
+                    <img src="img/2.jpg">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="img/3.jpg">
+                    <img src="img/3.jpg">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="img/4.jpg">
+                    <img src="img/4.jpg">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="img/5.jpg">
+                    <img src="img/5.jpg">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="my-slider">
+            <div>
+                <img src="https://picsum.photos/700/300?random=1" alt="" width="100%" height="350px">
+            </div>
+            <div>
+                <img src="https://picsum.photos/700/300?random=2" alt="" width="100%" height="350px">
+            </div>
+            <div>
+                <img src="https://picsum.photos/700/300?random=3" alt="" width="100%" height="350px">
+            </div>
+
+            <div>
+                <img src="https://picsum.photos/700/300?random=4" alt="" width="100%" height="350px">
+            </div>
+
+            <div>
+                <img src="https://picsum.photos/700/300?random=5" alt="" width="100%" height="350px">
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="js/countup.js"></script>
+    <script>
+        $('.my-slider').slick({
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            dots: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        arrows: false
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false
+                    }
+                }
+            ]
+        });
+        $(document).ready(function () {
+            // add all to same gallery
+            $(".gallery a").attr("data-fancybox", "mygallery");
+            // assign captions and title from alt-attributes of images:
+            $(".gallery a").each(function () {
+                $(this).attr("data-caption", $(this).find("img").attr("alt"));
+                $(this).attr("title", $(this).find("img").attr("alt"));
+            });
+            // start fancybox:
+            $(".gallery a").fancybox();
+        });
+    </script>
+</body>
+
+</html>

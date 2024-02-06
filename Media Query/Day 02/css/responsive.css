@@ -1,0 +1,64 @@
+@media (min-width:768px) {
+    .top-tray {
+        display: flex;
+    }
+
+    #bars {
+        display: none;
+    }
+
+    .box {
+        background-color: darkgoldenrod;
+    }
+
+    #menu {
+        position: static;
+        flex-direction: row;
+        background-color: white;
+        padding: 0;
+        box-shadow: none;
+        width: initial;
+        height: 100%;
+    }
+
+    .banner-content .tagline {
+        font-size: 1rem;
+    }
+
+    .banner-content h1 {
+        font-size: 3rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width:992px) {
+    .banner-content .tagline {
+        font-size: 1.2rem;
+    }
+
+    .banner-content>* {
+        margin-top: 30px;
+    }
+
+    .banner {
+        height: 800px;
+    }
+
+    .banner-content h1 {
+        font-size: 4.5rem;
+    }
+
+    .banner p {
+        font-size: 1.2rem;
+    }
+
+    /* greater than 992 */
+    .box {
+        background-color: darkblue;
+    }
+}
+
+/* 1200 */

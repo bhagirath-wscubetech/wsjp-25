@@ -1,0 +1,37 @@
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.slick-slide {
+    padding: 5px;
+}
+
+.slick-arrow::before {
+    color: black !important;
+    font-size: 25px !important;
+}
+
+.gallery{
+    width: 100%;
+    display: flex;
+    gap: 5px;
+}
+.gallery-item{
+    flex-grow: 1;
+}
+.gallery-item img{
+    width: 100%;
+}
+
+.counter{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border-radius: 50%;
+    background-color: darkgoldenrod;
+    color: white;
+    font-size: 50px;
+}

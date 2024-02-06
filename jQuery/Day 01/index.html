@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style></style>
+</head>
+
+<body>
+    <button class="btn">Click1</button>
+    <button class="btn">Click2</button>
+    <button class="btn">Click3</button>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        // var btn = document.querySelectorAll(".btn");
+
+        // for (b of btn) {
+        //     b.addEventListener(
+        //         "click",
+        //         function (e) {
+        //             console.log(e.target);
+        //         }
+        //     )
+        // }
+
+        var btn = $(".btn");
+
+        btn.click(
+            function () {
+                $(this).slideUp(2000);
+            }
+        )
+
+
+    </script>
+</body>
+
+</html>
