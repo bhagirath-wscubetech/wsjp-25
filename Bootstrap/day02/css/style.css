@@ -1,0 +1,8 @@
+#highlight-container {
+    background-color: #F7FAFF;
+}
+
+.form-control:focus {
+    border-color: gold !important;
+    box-shadow: 0 0 0 0.25rem gold !important;
+}

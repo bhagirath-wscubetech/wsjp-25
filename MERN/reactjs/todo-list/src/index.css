@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.input-container input:focus{
+  border:none;
+  outline: none;
+}
+
+#taskBox {
+  padding: 0;
+  margin: 0;
+}
+#taskBox li{
+  margin: 10px 0;
+  list-style: none;
+  background-color:rgba(52, 152, 219,1.0);
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  position: relative;
+}
+.close-btn{
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}

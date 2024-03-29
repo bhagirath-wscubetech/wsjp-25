@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --theme-primary-color: #2699FB;
+}
+
+* {
+    font-family: "Inter", sans-serif;
+}
+
+
+.whatsapp-btn {
+    border: 1px green solid;
+    color: green;
+}
+
+.whatsapp-btn:hover {
+    border: 1px green solid;
+    color: green;
+}
+
+.theme-btn {
+    background-image: linear-gradient(60deg, #0ACEFE, var(--theme-primary-color));
+    color: white;
+}
+
+.theme-btn:hover {
+    color: white;
+}
+
+.tagline {
+    font-weight: bold;
+    padding-right: 40px;
+    background: url(../images/underline.png) no-repeat bottom center;
+    font-size: 2.5rem;
+}
+
+.tagline span {
+    color: var(--theme-primary-color);
+}
+
+.enquiry-form {
+    max-width: 410px;
+    height: 400px;
+    margin: auto;
+    background-color: white;
+}
+
+.ellipse {
+    width: 552px;
+    height: 552px;
+    border-radius: 50%;
+    background-color: #E9F5FF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    display: none;
+}

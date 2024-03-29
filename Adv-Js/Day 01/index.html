@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    <button onclick="user.getData()">Click</button>
+    <script>
+        const user = {
+            uname: "Bhagirath",
+            age: 50,
+            getData: function () {
+                console.log(this);
+                window.setTimeout(
+                    () => {
+                        // will not rebind
+                        console.log(this);
+                    },
+                    3000
+                )
+                window.setTimeout(
+                    function () {
+                        // will rebind
+                        console.log(this);
+                    },
+                    4000
+                )
+            }
+        }
+    </script>
+</body>
+
+</html>

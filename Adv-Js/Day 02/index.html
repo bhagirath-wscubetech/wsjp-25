@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    <button onclick="kuchbhi()">Click</button>
+    <script>
+        // array of objects
+        const users = [
+            {
+                name: "Bhagirath",
+                age: 40
+            },
+            {
+                name: "Rakesh",
+                age: 40
+            },
+            {
+                name: "Divya",
+                age: 30
+            }
+        ]
+        console.log(users);
+        console.log(JSON.stringify(users));
+
+        function divide(a, b) {
+            return new Promise(
+                (resolve, reject) => {
+                    if (a > b) {
+                        resolve(a / b);
+                    } else {
+                        reject("A is lesser than b");
+                    }
+                }
+            )
+        }
+
+
+        async function kuchbhi() {
+            const result = await divide(14, 10);
+            console.log(result);
+            console.log('Hii')
+        }
+
+
+
+        // const result = divide(14, 10);
+        // result
+        //     .then(
+        //         (success) => {
+        //             console.log("then", success);
+        //         }
+        //     )
+        //     .catch(
+        //         (error) => {
+        //             console.log("catch", error);
+        //         }
+        //     )
+        // console.log('Hii');
+    </script>
+</body>
+
+</html>

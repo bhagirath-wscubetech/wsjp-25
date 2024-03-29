@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Styles for skeleton loader */
+.skeleton-loader {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skeleton-item {
+  width: 30%;
+  /* Adjust width as needed */
+  max-width: 200px;
+  /* Set maximum width */
+  height: 200px;
+  /* Set height */
+  background-color: #f2f2f2;
+  /* Light grey */
+  margin: 10px;
+  /* Add margin between items */
+  border-radius: 5px;
+  /* Add border radius */
+  animation: pulse 1.5s infinite alternate;
+  /* Add animation */
+}
+
+/* Animation */
+@keyframes pulse {
+  0% {
+    background-color: #f2f2f2;
+    /* Light grey */
+  }
+
+  100% {
+    background-color: #e0e0e0;
+    /* Slightly darker grey */
+  }
+}

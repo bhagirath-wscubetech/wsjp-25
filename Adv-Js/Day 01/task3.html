@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const nums = [3, 5, 4, 14, 21, 20, 50, 60, 22, 57, 100, 101];
+        const even = nums.filter(
+            (n) => {
+                if (n % 2 == 0) return true;
+                else return false;
+            }
+        );
+        console.log(even);
+
+        // for (n of nums) {
+        //     if (n % 2 == 0) even.push(n);
+        // }
+        // console.log(even);
+    </script>
+</body>
+
+</html>
