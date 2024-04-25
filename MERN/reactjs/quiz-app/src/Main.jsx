@@ -41,7 +41,7 @@ export default function Main(props) {
 
     const logout = () => {
         localStorage.removeItem("user");
-        localStorage.removeItem("user_ansers");
+        localStorage.removeItem("user_answers");
         localStorage.removeItem("current");
         setUser(null);
     }

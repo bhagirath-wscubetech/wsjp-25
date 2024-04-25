@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Auth from "./pages/Auth";
 import QuizPlay from "./pages/QuizPlay";
 import QuizAdmin from "./pages/QuizAdmin";
+import QuizResult from "./pages/QuizResult";
 
 function App() {
   const routes = createBrowserRouter(
@@ -18,6 +19,10 @@ function App() {
       {
         path: "/play-quiz",
         element: <QuizPlay />
+      },
+      {
+        path: "/quiz-result",
+        element: <QuizResult/>
       },
       {
         path: "/admin",

@@ -1,20 +1,30 @@
-import add from "./cal.js"; // default 
-import { subt, multi } from "./cal.js"; // named
-import otpGenerator from "otp-generator";
+const http = require('http'); // node js inbuilt package
+const fs = require('fs');
 
-const res1 = add(2, 2);
-// console.log(res1);
+const PORT = 5000;
 
-// const res2 = subt(40, 10);
-// console.log(res2);
+const app = http.createServer(
+    (req, res) => {
+        let code = fs.readFileSync("public/404.html", "utf-8");
+        let status = 404;
+        if (req.url == "/") {
+            code = fs.readFileSync("public/index.html", "utf-8");
+            status = 200;
+        } else if (req.url == "/about") {
+            code = fs.readFileSync("public/about.html", "utf-8");
+            status = 200;
+        } else if (req.url == "/gallery" && req.method == "GET") {
+            code = fs.readFileSync("public/gallery.html", "utf-8");
+            status = 200;
+        } else if (req.url == "/blog-data" && req.method == "POST") {
+            code = fs.readFileSync("data/blog.json", "utf-8");
+            status = 200;
+        }
+        res.statusCode = status;
+        res.end(code);
+    }
+)
 
-// const res3 = multi(10, 4);
-// console.log(res3);
-
-const otp = otpGenerator.generate(6, {
-    lowerCaseAlphabets: true,
-    upperCaseAlphabets: false,
-    digits: true,
-    specialChars: false
-});
-console.log(otp)
+app.listen(PORT, () => {
+    console.log('Server started');
+})

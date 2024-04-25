@@ -1,0 +1,25 @@
+{
+    "blogs": [
+        {
+            "id": 1,
+            "title": "Getting Started with Machine Learning",
+            "author": "John Doe",
+            "date": "2023-05-15",
+            "content": "Machine learning is an exciting field that allows computers to learn from data and make predictions without being explicitly programmed. In this blog post, we'll cover the basics of machine learning, including supervised and unsupervised learning, common algorithms like linear regression and decision trees, and practical tips for getting started with your own machine learning projects."
+        },
+        {
+            "id": 2,
+            "title": "Introduction to Neural Networks",
+            "author": "Jane Smith",
+            "date": "2023-06-20",
+            "content": "Neural networks are a fundamental concept in artificial intelligence and machine learning. They are inspired by the structure and function of the human brain and are capable of learning complex patterns from data. In this blog post, we'll introduce the basic architecture of neural networks, including neurons, layers, and activation functions. We'll also discuss common types of neural networks, such as feedforward and recurrent networks, and provide examples of real-world applications."
+        },
+        {
+            "id": 3,
+            "title": "Python Tips and Tricks",
+            "author": "Alice Johnson",
+            "date": "2023-07-10",
+            "content": "Python is a powerful and versatile programming language that is widely used for various applications, including web development, data analysis, and artificial intelligence. In this blog post, we'll share some useful tips and tricks for writing cleaner, more efficient Python code. Topics covered include list comprehensions, lambda functions, error handling with try-except blocks, and more."
+        }
+    ]
+}
